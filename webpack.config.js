@@ -12,6 +12,7 @@ module.exports = {
     filename: "bundle.js",
     library: "devtools",
     libraryTarget: "umd",
+    globalObject: 'this'
   },
   module: {
     rules: [
@@ -24,5 +25,5 @@ module.exports = {
         },
       },
     ],
-  },
+  }
 };

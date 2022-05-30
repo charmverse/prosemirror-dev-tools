@@ -1,7 +1,7 @@
 import { DOMSerializer } from "prosemirror-model";
 import { Container } from "unstated";
 import { prettyPrint } from "html";
-import nanoid from "nanoid";
+import { nanoid } from "nanoid/non-secure";
 import subscribeOnUpdates from "../utils/subscribe-on-updates";
 import findNodeIn, { findNodeInJSON } from "../utils/find-node";
 import getEditorStateClass from "./get-editor-state";
@@ -150,9 +150,11 @@ export function updateEditorHistory(
   return newHistory;
 }
 
+const storageValue = typeof window !== "undefined" ? window.localStorage.getItem(SNAPSHOTS_KEY) : null;
+
 export default class EditorStateContainer extends Container {
   state = {
-    EditorState: function () {},
+    EditorState: function () { },
     view: null,
     state: {},
     schema: {},
@@ -162,7 +164,7 @@ export default class EditorStateContainer extends Container {
     expandPath: [],
     historyRolledBackTo: false,
     selectedHistoryItem: 0,
-    snapshots: JSON.parse(window.localStorage.getItem(SNAPSHOTS_KEY)) || [],
+    snapshots: JSON.parse(storageValue) || [],
     nodePicker: NODE_PICKER_DEFAULT,
   };
 
