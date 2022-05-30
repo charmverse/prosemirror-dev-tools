@@ -126,7 +126,7 @@ export function BlockNodeContent(props) {
             node={childNode}
             bg={props.colors[childNode.type.name]}
             onNodeSelected={props.onNodeSelected}
-            startPos={pos}
+            startPos={pos + 1}
           />
         );
       })}
@@ -142,7 +142,7 @@ export function BlockNode(props) {
       <BlockNodeView bg={color} onClick={() => props.onNodeSelected({ node })}>
         <Side>{startPos}</Side>
         <Center>{node.type.name}</Center>
-        <Side>{startPos + node.nodeSize - 1}</Side>
+        <Side>{startPos + node.nodeSize}</Side>
       </BlockNodeView>
       <BlockNodeContent
         content={node.content}
@@ -189,7 +189,7 @@ export default function GraphTab() {
                 <BlockNode
                   colors={nodeColors}
                   node={state.doc}
-                  startPos={0}
+                  startPos={-1}
                   onNodeSelected={structureTabState.selectNode}
                 />
               </GraphWrapper>
