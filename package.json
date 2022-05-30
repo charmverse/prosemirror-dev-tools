@@ -32,8 +32,9 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@emotion/css": "^11.1.3",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.6.0",
     "html": "^1.0.0",
     "jsondiffpatch": "^0.4.1",
     "nanoid": "^2.1.11",
@@ -41,12 +42,12 @@
     "prosemirror-model": ">=1.0.0",
     "prosemirror-state": ">=1.0.0",
     "react-dock": "^0.2.4",
-    "react-json-tree": "^0.11.2",
-    "unstated": "^2.1.1"
+    "react-json-tree": "^0.17.0",
+    "unstated": "github:storelift/unstated#2.1.2"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -64,7 +65,6 @@
     "pmm": "^2.0.0",
     "pre-commit": "^1.2.2",
     "preact": "^10.2.2",
-    "preact-compat": "^3.19.0",
     "prettier": "^2.0.5",
     "prosemirror-example-setup": "*",
     "prosemirror-schema-basic": "*",
