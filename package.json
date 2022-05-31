@@ -41,7 +41,7 @@
     "html": "^1.0.0",
     "jsondiffpatch": "^0.4.1",
     "lint-staged": "^10.2.2",
-    "nanoid": "^2.1.11",
+    "nanoid": "^3.3.4",
     "parcel": "^1.12.4",
     "pmm": "^2.0.0",
     "pre-commit": "^1.2.2",
