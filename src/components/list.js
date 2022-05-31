@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import styled from "@emotion/styled";
 import theme from "../theme";
 
-const noop = () => {};
+const noop = () => { };
 
 export const ListItem = styled("div")(
   {
@@ -22,7 +22,7 @@ export const ListItem = styled("div")(
     borderTop: `1px solid ${theme.main20}`,
     margin: 0,
 
-    "&:first-child": {
+    "&:first-of-type": {
       borderTop: "none",
     },
 
@@ -47,8 +47,8 @@ export const ListItem = styled("div")(
       background: props.background
         ? props.background(props)
         : props.isSelected
-        ? theme.main40
-        : "transparent",
+          ? theme.main40
+          : "transparent",
     };
   }
 );

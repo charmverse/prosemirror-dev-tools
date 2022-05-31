@@ -1,5 +1,5 @@
 import React from "react";
-import JSONTreeVendor from "react-json-tree";
+import { JSONTree as JSONTreeVendor } from "react-json-tree";
 import { jsonTreeTheme } from "./../theme";
 
 export default function JSONTree(props) {
