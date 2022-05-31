@@ -11,10 +11,17 @@ export class JsonDiffMain {
 
   async diff(input) {
     await this.scheduler.request();
+    let delta;
+    try {
+      delta = this.diffPatcher.diff(input.a, input.b)
+    }
+    // error is probably an emoji in the diff, which triggers "URIError: malformed URI sequence" error
+    catch (error) {
 
+    }
     return {
       id: input.id,
-      delta: this.diffPatcher.diff(input.a, input.b),
+      delta
     };
   }
 }
